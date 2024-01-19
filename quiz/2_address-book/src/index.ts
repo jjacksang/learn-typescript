@@ -1,21 +1,7 @@
-interface PhoneNumberDictionary {
-  [phone: string]: {
-    num: number;
-  };
-}
+import { Contact, PhoneType } from "./types";
 
-interface Contact{
-  name: string;
-  address: string;
-  phones: PhoneNumberDictionary;
-}
 
 // findContactByPhone함수에서 phone에는 잘못된 문자가 들어올 수 있음으로 enum으로 인터페이스를 만들어주고 사용한다
-enum PhoneType {
-  Home = 'home',
-  Office = 'office',
-  Studio = 'studio',
-}
 
 // api
 // TODO: 아래 함수의 반환 타입을 지정해보세요.
@@ -105,6 +91,11 @@ class AddressBook {
   }
   /* ------------------------------------------------ */
 }
+
+let div = document.querySelector('div') as HTMLDivElement;
+
+div.innerText;
+
 
 // let heroes = [
 //   { name: 'Tony', age: 30},
